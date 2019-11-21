@@ -249,11 +249,11 @@ a {
   text-decoration: $anchor-text-decoration;
 
   &:hover {
-    color: $anchor-color-hover;
+    color: $anchor-color-hover !important;
   }
 
   &:active {
-    color: $anchor-color-active;
+    color: $anchor-color-active !important;
   }
 
   &:visited {

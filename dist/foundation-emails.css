@@ -1041,10 +1041,10 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--anchor-color-hover);
+  color: var(--anchor-color-hover) !important;
 }
 a:active {
-  color: var(--anchor-color-hover);
+  color: var(--anchor-color-hover) !important;
 }
 a:visited {
   color: var(--primary-color);
@@ -1208,14 +1208,14 @@ table.button.expanded center {
 table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
-  background: var(--button-background-hover);
+  background: var(--button-background-hover) !important;
   color: var(--white);
 }
 
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0 solid var(--button-background-hover);
+  border: 0 solid var(--button-background-hover) !important;
 }
 
 table.button.secondary table td {
@@ -1229,23 +1229,23 @@ table.button.secondary table a {
 }
 
 table.button.secondary:hover table td {
-  background: var(--secondary-color-hover);
+  background: var(--secondary-color-hover) !important;
   color: var(--white);
 }
 table.button.secondary:hover table a {
-  border: 0 solid var(--secondary-color-hover);
+  border: 0 solid var(--secondary-color-hover) !important;
 }
 
 table.button.secondary:hover table td a {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 table.button.secondary:active table td a {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 table.button.secondary table td a:visited {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 table.button.success table td {
@@ -1257,10 +1257,10 @@ table.button.success table a {
 }
 
 table.button.success:hover table td {
-  background: var(--success-color-hover);
+  background: var(--success-color-hover) !important;
 }
 table.button.success:hover table a {
-  border: 0 solid var(--success-color-hover);
+  border: 0 solid var(--success-color-hover) !important;
 }
 
 table.button.alert table td {
@@ -1272,10 +1272,10 @@ table.button.alert table a {
 }
 
 table.button.alert:hover table td {
-  background: var(--alert-color-hover);
+  background: var(--alert-color-hover) !important;
 }
 table.button.alert:hover table a {
-  border: 0 solid var(--alert-color-hover);
+  border: 0 solid var(--alert-color-hover) !important;
 }
 
 table.button.warning table td {
@@ -1287,10 +1287,10 @@ table.button.warning table a {
 }
 
 table.button.warning:hover table td {
-  background: var(--warning-color-hover);
+  background: var(--warning-color-hover) !important;
 }
 table.button.warning:hover table a {
-  border: 0px solid var(--warning-color-hover);
+  border: 0px solid var(--warning-color-hover) !important;
 }
 
 table.callout {

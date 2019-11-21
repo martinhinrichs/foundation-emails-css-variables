@@ -167,7 +167,7 @@ table.button:visited,
 table.button:active {
   table {
     td {
-      background: var(--button-background-hover);
+      background: var(--button-background-hover) !important;
       color: $button-color;
     }
   }
@@ -178,7 +178,7 @@ table.button:visited,
 table.button:active {
   table {
     a {
-      border: 0 solid var(--button-background-hover);
+      border: 0 solid var(--button-background-hover) !important;
     }
   }
 }
@@ -201,12 +201,12 @@ table.button.secondary {
 table.button.secondary:hover {
   table {
     td {
-      background: var(--secondary-color-hover);
+      background: var(--secondary-color-hover) !important;
       color: $button-color;
     }
 
     a {
-      border: 0 solid var(--secondary-color-hover);
+      border: 0 solid var(--secondary-color-hover) !important;
     }
   }
 }
@@ -214,7 +214,7 @@ table.button.secondary:hover {
 table.button.secondary:hover {
   table {
     td a {
-      color: $button-color;
+      color: $button-color !important;
     }
   }
 }
@@ -222,7 +222,7 @@ table.button.secondary:hover {
 table.button.secondary:active {
   table {
     td a {
-      color: $button-color;
+      color: $button-color !important;
     }
   }
 }
@@ -230,7 +230,7 @@ table.button.secondary:active {
 table.button.secondary {
   table {
     td a:visited {
-      color: $button-color;
+      color: $button-color !important;
     }
   }
 }
@@ -251,11 +251,11 @@ table.button.success {
 table.button.success:hover {
   table {
     td {
-      background: var(--success-color-hover);
+      background: var(--success-color-hover) !important;
     }
 
     a {
-      border: 0 solid var(--success-color-hover);
+      border: 0 solid var(--success-color-hover) !important;
     }
   }
 }
@@ -276,11 +276,11 @@ table.button.alert {
 table.button.alert:hover {
   table {
     td {
-      background: var(--alert-color-hover);
+      background: var(--alert-color-hover) !important;
     }
 
     a {
-      border: 0 solid var(--alert-color-hover);
+      border: 0 solid var(--alert-color-hover) !important;
     }
   }
 }
@@ -301,11 +301,11 @@ table.button.warning {
 table.button.warning:hover {
   table {
     td {
-      background: var(--warning-color-hover);
+      background: var(--warning-color-hover) !important;
     }
 
     a {
-      border: 0px solid var(--warning-color-hover);
+      border: 0px solid var(--warning-color-hover) !important;
     }
   }
 }
