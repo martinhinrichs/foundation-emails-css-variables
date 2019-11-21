@@ -16,17 +16,18 @@
 // 1. Global
 // ---------
 
-$primary-color: #2199e8;
-$secondary-color: #777777;
-$success-color: #3adb76;
-$warning-color: #ffae00;
-$alert-color: #ec5840;
-$light-gray: #f3f3f3;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$pre-color: #ff6908;
+//$primary-color: #2199e8;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$success-color: var(--success-color);
+$warning-color: var(--warning-color);
+$alert-color: var(--alert-color);
+$light-gray: var(--light-gray);
+$medium-gray: var(--medium-gray);
+$dark-gray: var(--dark-gray);
+$black: var(--black);
+$white: var(--white);
+$pre-color: var(--pre-color);
 $global-width: 580px;
 $global-width-small: 95%;
 $global-gutter: 16px;
@@ -87,7 +88,8 @@ $hr-margin: 20px auto;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
 $anchor-color-visited: $anchor-color;
-$anchor-color-hover: darken($primary-color, 10%);
+$anchor-color-hover: var(--anchor-color-hover);
+
 $anchor-color-active: $anchor-color-hover;
 $stat-font-size: 40px;
 
@@ -122,11 +124,11 @@ $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-padding: 10px;
 $callout-margin-bottom: $global-margin;
-$callout-border: 1px solid darken($callout-background, 20%);
-$callout-border-secondary: 1px solid darken($secondary-color, 20%);
-$callout-border-success: 1px solid darken($success-color, 20%);
-$callout-border-warning: 1px solid darken($warning-color, 20%);
-$callout-border-alert: 1px solid darken($alert-color, 20%);
+$callout-border: 1px solid var(--callout-border);
+$callout-border-secondary: 1px solid var(--callout-border-secondary);
+$callout-border-success: 1px solid var(--callout-border-success);
+$callout-border-warning: 1px solid var(--callout-border-warning);
+$callout-border-alert: 1px solid var(--callout-border-alert);
 
 // 7. Menu
 // -------
