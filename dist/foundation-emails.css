@@ -82,6 +82,9 @@ table.container {
   Margin: 0 auto;
   text-align: inherit; }
 
+table.body-background {
+  background: var(--body-background); }
+
 table.row {
   padding: 0;
   width: 100%;

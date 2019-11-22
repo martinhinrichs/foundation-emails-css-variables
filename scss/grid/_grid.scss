@@ -41,6 +41,10 @@ table {
     text-align: inherit;
   }
 
+  &.body-background {
+    background: $body-background;
+  }
+
   &.row {
     padding: 0;
     width: 100%;

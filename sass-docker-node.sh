@@ -7,5 +7,3 @@ if [[ "$(docker images -q node-sass 2> /dev/null)" == "" ]]; then
 fi
 
 docker run --rm -v"$DIR/scss":/scss node-sass node-sass /scss/foundation-emails.scss > $DIR/dist/foundation-emails.css
-
-echo "saved dist/foundation-emails.css";
