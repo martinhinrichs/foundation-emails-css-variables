@@ -76,11 +76,11 @@ table, tr, td {
 @media only screen {
   html {
     min-height: 100%;
-    background: var(--light-gray);
+    background: var(--body-background);
   }
 }
 table.body {
-  background: var(--light-gray);
+  background: var(--body-background);
   height: 100%;
   width: 100%;
 }
@@ -114,7 +114,7 @@ th.column {
   margin: 0 auto;
   Margin: 0 auto;
   padding-left: 16px;
-  padding-bottom: 16px;
+  padding-bottom: var(--global-padding);
 }
 td.columns .column,
 td.columns .columns,
@@ -957,7 +957,7 @@ td,
 th,
 a {
   color: var(--black);
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-weight: normal;
   padding: 0;
   margin: 0;
@@ -974,7 +974,7 @@ h5,
 h6 {
   color: inherit;
   word-wrap: normal;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-weight: normal;
   margin-bottom: 10px;
   Margin-bottom: 10px;
@@ -1033,7 +1033,7 @@ p.subheader {
 
 small {
   font-size: 80%;
-  color: var(--medium-gray);
+  color: var(--small-font-color);
 }
 
 a {
@@ -1041,10 +1041,10 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--anchor-color-hover);
+  color: var(--anchor-color-hover) !important;
 }
 a:active {
-  color: var(--anchor-color-hover);
+  color: var(--anchor-color-hover) !important;
 }
 a:visited {
   color: var(--primary-color);
@@ -1111,7 +1111,7 @@ span.preheader {
   visibility: hidden;
   mso-hide: all !important;
   font-size: 1px;
-  color: var(--light-gray);
+  color: var(--body-background);
   line-height: 1px;
   max-height: 0px;
   max-width: 0px;
@@ -1121,32 +1121,33 @@ span.preheader {
 
 table.button {
   width: auto;
-  margin: 0 0 16px 0;
-  Margin: 0 0 16px 0;
+  margin: 0 0 var(--global-margin) 0;
+  Margin: 0 0 var(--global-margin) 0;
 }
 table.button table td {
   text-align: left;
-  color: var(--white);
-  background: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  color: var(--button-color);
+  background: var(--button-background);
+  border: 2px solid var(--button-background);
+  border-radius: var(--global-radius);
 }
 table.button table td a {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--body-font-family);
   font-size: 16px;
   font-weight: bold;
-  color: var(--white);
+  color: var(--button-color);
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px 8px 16px;
-  border: 0 solid var(--primary-color);
-  border-radius: 3px;
+  border: 0 solid var(--button-background);
+  border-radius: var(--global-radius);
 }
 table.button.radius table td {
-  border-radius: 3px;
+  border-radius: var(--global-radius);
   border: none;
 }
 table.button.rounded table td {
-  border-radius: 500px;
+  border-radius: var(--global-rounded);
   border: none;
 }
 
@@ -1162,7 +1163,7 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-  color: var(--white);
+  color: var(--button-color) !important;
 }
 
 table.button.tiny table td,
@@ -1208,44 +1209,74 @@ table.button.expanded center {
 table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
-  background: var(--button-background-hover);
-  color: var(--white);
+  background: var(--button-background-hover) !important;
+  color: var(--button-color);
 }
 
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0 solid var(--button-background-hover);
+  border: 0 solid var(--button-background-hover) !important;
+}
+
+table.button.light table td {
+  background: var(--button-light-background);
+  color: var(--button-color-alt);
+  border: 0px solid var(--button-light-background);
+}
+table.button.light table a {
+  color: var(--button-color-alt);
+  border: 0 solid var(--button-light-background);
+}
+
+table.button.light:hover table td {
+  background: var(--button-light-background-hover) !important;
+  color: var(--button-color-alt);
+}
+table.button.light:hover table a {
+  border: 0 solid var(--button-light-background-hover) !important;
+}
+
+table.button.light:hover table td a {
+  color: var(--button-color-alt) !important;
+}
+
+table.button.light:active table td a {
+  color: var(--button-color-alt) !important;
+}
+
+table.button.light table td a:visited {
+  color: var(--button-color-alt) !important;
 }
 
 table.button.secondary table td {
   background: var(--secondary-color);
-  color: var(--white);
+  color: var(--button-color);
   border: 0px solid var(--secondary-color);
 }
 table.button.secondary table a {
-  color: var(--white);
+  color: var(--button-color);
   border: 0 solid var(--secondary-color);
 }
 
 table.button.secondary:hover table td {
-  background: var(--secondary-color-hover);
-  color: var(--white);
+  background: var(--secondary-color-hover) !important;
+  color: var(--button-color);
 }
 table.button.secondary:hover table a {
-  border: 0 solid var(--secondary-color-hover);
+  border: 0 solid var(--secondary-color-hover) !important;
 }
 
 table.button.secondary:hover table td a {
-  color: var(--white);
+  color: var(--button-color) !important;
 }
 
 table.button.secondary:active table td a {
-  color: var(--white);
+  color: var(--button-color) !important;
 }
 
 table.button.secondary table td a:visited {
-  color: var(--white);
+  color: var(--button-color) !important;
 }
 
 table.button.success table td {
@@ -1257,10 +1288,10 @@ table.button.success table a {
 }
 
 table.button.success:hover table td {
-  background: var(--success-color-hover);
+  background: var(--success-color-hover) !important;
 }
 table.button.success:hover table a {
-  border: 0 solid var(--success-color-hover);
+  border: 0 solid var(--success-color-hover) !important;
 }
 
 table.button.alert table td {
@@ -1272,10 +1303,10 @@ table.button.alert table a {
 }
 
 table.button.alert:hover table td {
-  background: var(--alert-color-hover);
+  background: var(--alert-color-hover) !important;
 }
 table.button.alert:hover table a {
-  border: 0 solid var(--alert-color-hover);
+  border: 0 solid var(--alert-color-hover) !important;
 }
 
 table.button.warning table td {
@@ -1287,15 +1318,15 @@ table.button.warning table a {
 }
 
 table.button.warning:hover table td {
-  background: var(--warning-color-hover);
+  background: var(--warning-color-hover) !important;
 }
 table.button.warning:hover table a {
-  border: 0px solid var(--warning-color-hover);
+  border: 0px solid var(--warning-color-hover) !important;
 }
 
 table.callout {
-  margin-bottom: 16px;
-  Margin-bottom: 16px;
+  margin-bottom: var(--global-margin);
+  Margin-bottom: var(--global-margin);
 }
 
 th.callout-inner {
@@ -1337,8 +1368,8 @@ th.callout-inner.alert {
   line-height: 0;
   max-width: 100%;
   transition: box-shadow 200ms ease-out;
-  border-radius: 3px;
-  margin-bottom: 16px;
+  border-radius: var(--global-radius);
+  margin-bottom: var(--global-margin);
 }
 .thumbnail:hover, .thumbnail:focus {
   box-shadow: 0 0 6px 1px rgba(var(--primary-color), 0.5);

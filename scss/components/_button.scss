@@ -30,7 +30,7 @@ $button-color: $white !default;
 
 /// Text color of buttons with a light background.
 /// @type Color
-$button-color-alt: $medium-gray !default;
+$button-color-alt: black !default;
 
 /// Font weight of buttons.
 /// @type Weight
@@ -68,6 +68,7 @@ table.button {
       color: $button-color;
       background: $button-background;
       border: $button-border;
+      border-radius: $button-radius;
 
       a {
         font-family: $body-font-family;
@@ -106,7 +107,7 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-  color: $button-color;
+  color: $button-color !important;
 }
 
 table.button.tiny {
@@ -167,7 +168,7 @@ table.button:visited,
 table.button:active {
   table {
     td {
-      background: var(--button-background-hover);
+      background: var(--button-background-hover) !important;
       color: $button-color;
     }
   }
@@ -178,10 +179,64 @@ table.button:visited,
 table.button:active {
   table {
     a {
-      border: 0 solid var(--button-background-hover);
+      border: 0 solid var(--button-background-hover) !important;
     }
   }
 }
+
+
+table.button.light {
+  table {
+    td {
+      background: $button-light-background;
+      color: $button-color-alt;
+      border: 0px solid $button-light-background;
+    }
+
+    a {
+      color: $button-color-alt;
+      border: 0 solid $button-light-background;
+    }
+  }
+}
+
+table.button.light:hover {
+  table {
+    td {
+      background: var(--button-light-background-hover) !important;
+      color: $button-color-alt;
+    }
+
+    a {
+      border: 0 solid var(--button-light-background-hover) !important;
+    }
+  }
+}
+
+table.button.light:hover {
+  table {
+    td a {
+      color: $button-color-alt !important;
+    }
+  }
+}
+
+table.button.light:active {
+  table {
+    td a {
+      color: $button-color-alt !important;
+    }
+  }
+}
+
+table.button.light {
+  table {
+    td a:visited {
+      color: $button-color-alt !important;
+    }
+  }
+}
+
 
 table.button.secondary {
   table {
@@ -201,12 +256,12 @@ table.button.secondary {
 table.button.secondary:hover {
   table {
     td {
-      background: var(--secondary-color-hover);
+      background: var(--secondary-color-hover) !important;
       color: $button-color;
     }
 
     a {
-      border: 0 solid var(--secondary-color-hover);
+      border: 0 solid var(--secondary-color-hover) !important;
     }
   }
 }
@@ -214,7 +269,7 @@ table.button.secondary:hover {
 table.button.secondary:hover {
   table {
     td a {
-      color: $button-color;
+      color: $button-color !important;
     }
   }
 }
@@ -222,7 +277,7 @@ table.button.secondary:hover {
 table.button.secondary:active {
   table {
     td a {
-      color: $button-color;
+      color: $button-color !important;
     }
   }
 }
@@ -230,7 +285,7 @@ table.button.secondary:active {
 table.button.secondary {
   table {
     td a:visited {
-      color: $button-color;
+      color: $button-color !important;
     }
   }
 }
@@ -251,11 +306,11 @@ table.button.success {
 table.button.success:hover {
   table {
     td {
-      background: var(--success-color-hover);
+      background: var(--success-color-hover) !important;
     }
 
     a {
-      border: 0 solid var(--success-color-hover);
+      border: 0 solid var(--success-color-hover) !important;
     }
   }
 }
@@ -276,11 +331,11 @@ table.button.alert {
 table.button.alert:hover {
   table {
     td {
-      background: var(--alert-color-hover);
+      background: var(--alert-color-hover) !important;
     }
 
     a {
-      border: 0 solid var(--alert-color-hover);
+      border: 0 solid var(--alert-color-hover) !important;
     }
   }
 }
@@ -301,11 +356,11 @@ table.button.warning {
 table.button.warning:hover {
   table {
     td {
-      background: var(--warning-color-hover);
+      background: var(--warning-color-hover) !important;
     }
 
     a {
-      border: 0px solid var(--warning-color-hover);
+      border: 0px solid var(--warning-color-hover) !important;
     }
   }
 }
